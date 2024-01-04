@@ -11,6 +11,9 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+import VideoPlayer from './screens/VideoPlayer';
+import HomeScreen from './screens/HomeScreen';
+
 import type {Node} from 'react';
 import {
   SafeAreaView,
@@ -34,11 +37,11 @@ const { width, height } = Dimensions.get("window");
 
 const Tab = createBottomTabNavigator();
 
-const HomeScreen = () => {
-  return (
-    <Text>Home</Text>
-  )
-}
+// const HomeScreen = () => {
+//   return (
+//     <Text>Home</Text>
+//   )
+// }
 
 const SettingsScreen = () => {
   return (
@@ -64,11 +67,11 @@ const EngWordssss = () => {
   )
 }
 
-const VideoPlayer = () => {
-  return (
-    <Text>Learn</Text>
-  )
-}
+// const VideoPlayer = () => {
+//   return (
+//     <Text>Learn</Text>
+//   )
+// }
 
 const Check = () => {
   return (
@@ -90,14 +93,18 @@ const BottomTabNavigator = () => {
         {/* <Tab.Screen name='Home' component={DrawerNavigator} /> */}
 
         {/* <Tab.Screen name='Learn' component={LearnnnnScreen} options={{ headerShown: false }}/> */}
-        <Tab.Screen name='Learn' component={LearnEngWords} options={{ headerShown: false }} />
-        <Tab.Screen name='Add Word' component={AddWords} options={{ headerShown: false }} />
+        {/* <Tab.Screen name='Learn' component={LearnEngWords} options={{ headerShown: false }} /> */}
+        <Tab.Screen name='Home' component={HomeScreen} />
+        {/* <Tab.Screen name='Add Word' component={AddWords} options={{ headerShown: false }} /> */}
+        <Tab.Screen name='Add Word' component={AddWords}  />
 
-        <Tab.Screen name='Check' component={Check} options={{ headerShown: false }} />
+        {/* <Tab.Screen name='Check' component={Check} options={{ headerShown: false }} /> */}
+        <Tab.Screen name='Check' component={Check} />
 
         {/* <Tab.Screen name='Words' component={WordssScreen} /> */}
         {/* <Tab.Screen name='Words' component={EngWords} options={{ headerShown: false }}/> */}
-        <Tab.Screen name='Words' component={EngWordssss} options={{ headerShown: false }} />
+        {/* <Tab.Screen name='Words' component={EngWordssss} options={{ headerShown: false }} /> */}
+        <Tab.Screen name='Words' component={EngWordssss} />
         {/* <Tab.Screen name='Words' component={EngWordss} options={{ headerShown: false }}/> */}
 
         <Tab.Screen name="videoplayer" component={VideoPlayer} />
